@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Jmol, see https://www.jmol.org">
+  <meta name="author" content="Daniele Rapetti">
+  <meta name="keywords" content="generated_by_Jmol_Webexport">
+  <title>Top Down Classified NPs</title>
+  <!-- Below is used locally but not on server. May generate warnings. -->
+  <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Below is used on server, but not locally. May generate warnings.-->
+  <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jsmol/JSmol.min.js"></script>
+  <script type="text/javascript">
+    var jmolApplet0 = "jmolApplet0"; //our viewer
+    var jmolInfo; //setup parameters
+    ; (function () {
+
+      // Developers: The debugCode flag is checked in j2s/java/core.z.js, 
+      // and, if TRUE, skips loading the core methods, forcing those
+      // to be read from their individual directories. Set this
+      // true if you want to do some code debugging by inserting
+      // System.out.println, document.title, or alert commands
+      // anywhere in the Java or Jmol code.
+
+      var s = document.location.search;
+      Jmol.debugCode = (s.indexOf("debugcode") >= 0);
+
+
+      jmol_isReady = function (jmolApplet) {
+        elem = document.getElementById("JSmol_loading_msg");
+        elem.style.visibility = "hidden";
+        elem.style.height = "0";
+        elem.style.border = "none";
+      }
+
+
+      jmolInfo = {
+        width: "100%",
+        height: "100%",
+        debug: false,
+        color: "white",
+        addSelectionOptions: false,
+        use: "HTML5",
+        coverImage: "TDPreview.png",        // initial image instead of applet
+        coverScript: "",	// special script for click of cover image (otherwise equal to script)
+        deferApplet: false,                  // wait to load applet until click
+        deferUncover: true,                 // wait to uncover applet until script completed
+        //The paths below assume your server is set up with standard JSmol directory.  If not
+        //they will need modification for the page to work.
+        jarPath: "https://chemapps.stolaf.edu/jmol/jsmol/java", //path to applet .jar files on server.
+        j2sPath: "https://chemapps.stolaf.edu/jmol/jsmol/j2s",//path to javascript version.
+        serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php", //if your own server does not allow php, you can change to https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php
+        makeLiveImg: "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/play_make_live.jpg",//path to activate 3-D image.
+        jarFile: "JmolAppletSigned0.jar",
+        isSigned: true,
+        //disableJ2SLoadMonitor: true,
+        disableInitialConsole: true,
+        readyFunction: jmol_isReady,
+        //defaultModel: "ethylene/ethylene.xyz",
+        script: "load ih309-300.spt"
+      }
+
+      // ?_USE=JAVA   ?_USE=SIGNED   ?_USE=HTML5
+      if (s.indexOf("USE=") >= 0)
+        jmolInfo.use = s.split("USE=")[1].split("&")[0]
+      else if (s.indexOf("JAVA") >= 0)
+        jmolInfo.use = "JAVA"
+      else if (s.indexOf("IMAGE") >= 0)
+        jmolInfo.use = "IMAGE"
+      else if (s.indexOf("NOWEBGL") >= 0)
+        jmolInfo.use = "JAVA IMAGE"
+      else if (s.indexOf("WEBGL") >= 0)
+        jmolInfo.use = "WEBGL HTML5"
+      if (s.indexOf("NOWEBGL") >= 0)
+        jmolInfo.use = use.replace(/WEBGL/, "")
+      var useSignedApplet = (s.indexOf("SIGNED") >= 0);
+      if (useSignedApplet && jmolInfo.use == "HTML5") jmolInfo.use = "JAVA";
+
+      var protocol = window.location.protocol.toLowerCase();
+      if (protocol == "file:") {
+        jmolInfo.jarPath = "https://chemapps.stolaf.edu/jmol/jsmol/java";
+        jmolInfo.j2sPath = "https://chemapps.stolaf.edu/jmol/jsmol/j2s";
+        jmolInfo.serverURL = "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php"; //you can change to your own path
+        jmolInfo.makeLiveImg = "https://chemapps.stolaf.edu/jmol/jsmol/j2s/img/play_make_live.jpg";
+        jmolInfo.jarFile = "JmolAppletSigned.jar";
+        jmolInfo.isSigned = "true";
+      }
+    })();
+
+    $(document).ready(function () {
+      $("#Jmol").html(Jmol.getAppletHtml(jmolApplet0, jmolInfo));
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="JmolTextPane">
+    <div id="Text_Buttons">
+      <div id="JSmol_loading_msg">
+        Once the molecule file is fully loaded, the image at right will become live. At that time the "activate 3-D"
+        icon <img id="make_live_icon" src="" height="15px" /> will disappear.
+        <hr>
+      </div>
+      <h1>
+        Top Down
+      </h1>
+      <p>The simulation
+      </p>
+      <div>
+        <div id="section_PlayPause" class="section">
+          <div id="PlayPause" class="JmolButtonDiv">
+            <button onclick="Jmol.script(jmolApplet0,'anim off;frame previous;');">Prev
+              frame</button>
+            <button onclick="Jmol.script(jmolApplet0,'anim on;');">Play</button>
+            <button onclick="Jmol.script(jmolApplet0,'anim off;');">Pause</button>
+            <button onclick="Jmol.script(jmolApplet0,'anim off;frame next;');">Next
+              frame</button>
+
+          </div>
+        </div>
+      </div>
+      <div id="section_NPs" class="section">
+
+        Select the NP and the temperature to be visualized:
+        <div id="Ih" class="JmolButtonDiv">
+          <button onclick="Jmol.script(jmolApplet0,'load ico309-300.spt;');">Ih309 @300K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load ico309-400.spt;');">Ih309 @400K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load ico309-500.spt;');">Ih309 @500K</button>
+        </div>
+        <div id="To" class="JmolButtonDiv">
+          <button onclick="Jmol.script(jmolApplet0,'load to309_9_4-300.spt;');">To309 @300K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load to309_9_4-400.spt;');">To309 @400K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load to309_9_4-500.spt;');">To309 @500K</button>
+        </div>
+        <div id="Dh" class="JmolButtonDiv">
+          <button onclick="Jmol.script(jmolApplet0,'load dh348_3_2_3-300.spt;');">Dh348 @300K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load dh348_3_2_3-400.spt;');">Dh348 @400K</button>
+          <button onclick="Jmol.script(jmolApplet0,'load dh348_3_2_3-500.spt;');">Dh348 @500K</button>
+        </div>
+        <div id="Ideals" class="JmolButtonDiv">
+          <button onclick="Jmol.script(jmolApplet0,'load ico309-Ideal.spt;');">Ih309 Ideal</button>
+          <button onclick="Jmol.script(jmolApplet0,'load to309_9_4-Ideal.spt;');">To309 Ideal</button>
+          <button onclick="Jmol.script(jmolApplet0,'load dh348_3_2_3-Ideal.spt;');">Dh348 Ideal</button>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="onBottom">
+      <div id="creationdiv" class="update-info">
+        Page skeleton and JavaScript generated by the Export to Web module of <a
+          href="https://jmol.sourceforge.net">Jmol
+          14.6.4_2016.11.05 2016-11-10 03:30</a> on 13 gen 2023.
+      </div>
+      <div id="authordiv" class="update-info">
+        Based on a model of A. Herr&#x00E1;ez and J. Gutow
+      </div>
+      <p style="font-size:0.4em;">If your browser/OS combination is Java capable, you will get snappier performance if
+        you <a href="?use=JAVA">use Java</a></p>
+    </div>
+  </div>
+
+  <div id="Viewer_and_Widgets" class="JmolPane">
+    <div id="Jmol" class="JmolViewerPane">This will be the viewer
+      <img src="TDPreview.png" alt="still of jmol image" style="height:100%; width:100%" />
+    </div>
+  </div>
+</body>
+
+</html>
