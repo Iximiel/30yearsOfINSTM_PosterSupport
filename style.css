@@ -87,6 +87,13 @@ h1 {
     overflow: hidden;
 }
 
+.animatedGif {
+    max-width: 600px;
+    max-height: 600px;
+    width: 20%;
+    height: auto;
+}
+
 @media screen and (orientation: portrait) {
     .JmolTextPane {
         width: 100%;
