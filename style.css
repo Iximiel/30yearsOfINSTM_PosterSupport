@@ -24,24 +24,6 @@ h1 {
     color: orange;
 }
 
-.JmolTextPane {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-    overflow: auto;
-}
-
-.JmolPane {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    width: 60%;
-    height: 100%;
-    overflow: hidden;
-}
-
 .JmolViewerPane {
     width: 99%;
     height: 100%;
@@ -96,6 +78,50 @@ h1 {
 .onBottom {
     bottom: 0px;
     position: absolute;
+}
+
+
+.JmolPane {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+    .JmolTextPane {
+        width: 100%;
+        height: 40%;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .JmolPane {
+        height: 60%;
+        width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .JmolTextPane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .JmolPane {
+        position: absolute;
+
+        left: 40%;
+        width: 60%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
 }
 
 /*override, to allow scrolling to bottom of palette*/
