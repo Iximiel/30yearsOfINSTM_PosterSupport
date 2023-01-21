@@ -13,9 +13,33 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript">
+        let myGIFS = [
+            { "id": "ihGIF", "np": "ico309_" },
+            { "id": "toGIF", "np": "to309_9_4_" },
+            { "id": "dhGIF", "np": "dh348_3_2_3_" },
+        ]
+        let analysisName = {
+            "bottomUP": "bottom-up",
+            "topDown": "top-down",
+        }
+        Ts = ["500", "300", "400"]
+        function randomGIFS() {
+            let analysis = ["bottomUP", "topDown"][Math.floor(Math.random() * 2)]
+            let T = Ts[Math.floor(Math.random() * 3)]
+            for (const myid in myGIFS) {
+                myIMG = document.getElementById(myGIFS[myid]['id'])
+                console.log(myid, myIMG)
+                myIMG.setAttribute("src", myGIFS[myid]['np'] + T + "-" + analysis + ".gif")
+            }
+            myInfo = document.getElementById('GIFsInfo').innerText = "Temperature: " + T + " K, " + analysisName[analysis] + " classification"
+
+
+        }
+    </script>
 </head>
 
-<body>
+<body onload="randomGIFS();">
 
     <div style="overflow: scroll;">
         <div id="title">
@@ -24,16 +48,25 @@
                 Identities in Gold Nanoparticles" presented @ "30 years of INSTM"</h1>
         </div>
 
-        <div><img src="ico309_300-bottomUP.gif" class="animatedGif"></div>
+        <div>
+            <div class="animatedGifContainer">
+                <img id="ihGIF" class="animatedGif"><img id="toGIF" class="animatedGif"><img id="dhGIF"
+                    class="animatedGif">
+                <!--<img id="ihGIF" src="ico309_300-bottomUP.gif" class="animatedGif"><img id="toGIF"
+                    src="to309_9_4_300-bottomUP.gif" class="animatedGif"><img id="dhGIF"
+                    src="dh348_3_2_3_300-bottomUP.gif" class="animatedGif">-->
+            </div>
+            <div id="GIFsInfo" style=" text-align: center;"></div>
+        </div>
 
         <div id="links">
             Here You can visit the pages with the 3D models (thanks to <a href="https://jmol.sourceforge.net">Jmol</a>):
             <ul>
 
-                <li><a href="./BottomUp/BottomUp.html">Bottom up animations</a> with the results of the classification
+                <li><a href="./BottomUp/BottomUp.html">Bottom up models</a> with the results of the classification
                     with
                     clustering methods (HDBSCA) on the SOAP fingerprints generated from the trajectories</li>
-                <li><a href="./TopDown/TopDown.html">Top Down animations</a> with the results of the classification from
+                <li><a href="./TopDown/TopDown.html">Top Down models</a> with the results of the classification from
                     a
                     dictionary of known atomic environmenst</li>
             </ul>
